@@ -11,7 +11,8 @@ import ar.hsbc.com.sil.service.cliente.Telefono;
 public class ClienteUtils {
 
 	private List<Cliente> clientes = new ArrayList<Cliente>();
-
+	private String hola;
+	
 	public ClienteUtils() {
 		Cliente cliente1 = new Cliente();
 		cliente1.setDocumento("15827285");
