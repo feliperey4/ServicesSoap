@@ -1,0 +1,10 @@
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://service.sil.com.hsbc.ar/">ns1:InfoClienteService
+		</service-name-pattern>
+		<handler>
+			<handler-name>HandlerInfoClienteResponse</handler-name>
+			<handler-class>ar.hsbc.com.sil.service.HandlerInfoClienteResponse</handler-class>
+		</handler>
+	</handler-chain>
+</handler-chains>

@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ar.hsbc.com.sil</groupId>
+	<artifactId>sil</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>sil Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<junit.version>3.8.1</junit.version>
+		<spring.version>2.5.6</spring.version>
+		<jaxws-rt.version>2.2.3</jaxws-rt.version>
+		<jaxws-spring.version>1.8</jaxws-spring.version>
+		<maven-compiler-plugin.version>2.3.1</maven-compiler-plugin.version>
+		<jdk.version>1.6</jdk.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>java.net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Spring framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- JAX-WS -->
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>${jaxws-rt.version}</version>
+		</dependency>
+
+		<!-- Library from java.net, integrate Spring with JAX-WS -->
+		<dependency>
+			<groupId>org.jvnet.jax-ws-commons.spring</groupId>
+			<artifactId>jaxws-spring</artifactId>
+			<version>${jaxws-spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.xml.stream.buffer</groupId>
+					<artifactId>streambuffer</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.jvnet.staxex</groupId>
+					<artifactId>stax-ex</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
