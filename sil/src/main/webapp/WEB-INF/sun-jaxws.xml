@@ -13,4 +13,11 @@
       implementation="ar.hsbc.com.sil.service.impl.ProductoServiceImpl"
       url-pattern="/productoService"
   />
+  
+  <endpoint
+      name="ProductoService"
+      implementation="ar.hsbc.com.sil.service.impl.DatosReferencialesServiceImpl"
+      url-pattern="/datosReferencialesService"
+  />
+  
 </endpoints>

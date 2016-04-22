@@ -20,8 +20,8 @@ public class ClienteServiceResponse extends ServiceResponse {
 	@XmlElement(name = "cliente")
 	private List<Cliente> clientes;
 	
-	@XmlElementWrapper(name = "clientes")
-	@XmlElement(name = "cliente")
+	@XmlElementWrapper(name = "persona")
+	@XmlElement(name = "persona")
 	private List<Persona> personas;
 
 	public ClienteServiceResponse() {
